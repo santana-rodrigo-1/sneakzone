@@ -1,3 +1,6 @@
+ :root{
+    --laranja-marca: #ff6b35;
+ }
  body {
      font-family: Arial, Helvetica, sans-serif;
      color: black;
@@ -12,7 +15,7 @@
  }
 
  h1 {
-     color: #ff6b35;
+     color: var(--laranja-marca);
      font-size: 40px;
  }
 
@@ -23,7 +26,7 @@
  h2 {
      color: black;
      font-size: 26px;
-     border-bottom: 3px solid #ff6b35;
+     border-bottom: 3px solid var(--laranja-marca);
      padding-bottom: 6px;
  }
 
@@ -52,7 +55,7 @@
  }
 
  nav a:hover {
-     color: #ff6b35;
+     color: var(--laranja-marca);
  }
 
  nav ul {
@@ -170,7 +173,7 @@
 
  }
  aside.top-bar {
-  background-color: #ff6b35; /* Fundo Laranja */
+  background-color: var(--laranja-marca); /* Fundo Laranja */
   color: #ffffff;            /* Texto Branco */
   text-align: center;        /* Centraliza */
   padding: 10px 16px;        /* Espaçamento interno */

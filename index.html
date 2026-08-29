@@ -117,7 +117,31 @@
                     </tbody>
                 </table>
             </div>
+
+
+        <input type="number" id="ValorCompra">
+
+        <select id="regiao">
+            <option value="">Selecione</option>
+            <option value="sudeste">Sudeste</option>
+            <option value="sul">Sul</option>
+            <option value="nordeste">Nordeste</option>
+        </select>
+
+
+<button type="button" onclick="calcularFrete()">
+    Calcular frete
+</button>
+
+
+<p id="resultadoFrete"></p>
+
+
+
+
+
         </section>
+
 
         <section id="precos">
             <h2>Fretes e Prazos</h2>
@@ -266,7 +290,7 @@
                                         </div>
                                     </div>
                                     <div>
-                                        <button type="submit"><i></i> Cadastrar</button>
+                                        <button type="button" onclick="cadastrar()"><i></i>Cadastrar</button>
                                         <button type="reset">Limpar</button>
                                     </div>
                                 </div>

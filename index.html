@@ -36,14 +36,14 @@
 
         <section id="produtos" class="container">
             <h2> Nossos Tênis </h2>
-            <div>
+            <div class="row g-4">
                 <article class="col-12 col-md-4">
                     <span class="badge">Desconto</span>
                     <img src="img/aerorun.jpg" alt="Tênis de corrida laranja modelo Aerorun">
                     <h3> AeroRun Laranja </h3>
                     <p> Leveza para bater seu recorde.</p>
                     <p><del>R$ 399,90</del> R$ 349,90</p>
-                    <button type="button" onclick="comprar('TrailMax', 349,90)">Comprar</button>
+                    <a class="btn btn-danger">Comprar</a>
                 </article>
                 <article class="col-12 col-md-4">
                     <span class="badge">Desconto</span>
@@ -51,7 +51,7 @@
                     <h3> UrbanStep Azul </h3>
                     <p> O casual do dia a dia.</p>
                     <p> <del>R$ 279,90</del> R$230,00</p>
-                    <button type="button" onclick="comprar('TrailMax', 230)">Comprar</button>
+                    <a class="btn btn-danger">Comprar</a>
                 </article>
                 <article class="col-12 col-md-4">
                     <span class="badge lancamento">lançamento</span>
@@ -59,7 +59,7 @@
                     <h3> TrailMax Verde </h3>
                     <p> Aderencia para trilhas.</p>
                     <p>R$ 429,90</p>
-                    <button type="button" onclick="comprar('TrailMax', 429,90)">Comprar</button>
+                    <a class="btn btn-danger">Comprar</a>
                 </article>
             </div>
 
@@ -198,33 +198,33 @@
                         <div>
                             <div id="mensagemSucesso" role="alert"></div>
                             <form id="formCadastro" novalidate>
-                                <div class="dados-cliente">
-                                    <div class="campo">
+                                <div class="row g-3">
+                                    <div class="campo col-12 col-md-6">
                                         <label for="nome">Nome completo</label>
                                         <input type="text" id="nome" name="nome" placeholder="Ex.: Ana Paula Souza"
                                             required>
                                         <div>Por favor, informe seu nome completo.</div>
                                     </div>
-                                    <div class="campo">
+                                    <div class="campo col-12 col-md-6">
                                         <label for="email">E-mail</label>
                                         <input type="email" id="email" name="email" placeholder="voce@email.com"
                                             required>
                                         <div>Por favor, informe um e-mail válido.</div>
                                     </div>
-                                    <div class="campo">
+                                    <div class="campo col-12 col-md-6">
                                         <label for="telefone">Telefone (com DDD)</label>
                                         <input type="tel" id="telefone" name="telefone" placeholder="(21) 90000-0000"
                                             pattern="\(\d{2}\)\s?\d{4,5}-\d{4}" title="Use o formato (21) 90000-0000"
                                             required>
                                         <div>Use o formato (21) 90000-0000.</div>
                                     </div>
-                                    <div class="campo">
+                                    <div class="campo col-12 col-md-6">
                                         <label for="idade">Idade</label>
                                         <input type="number" id="idade" name="idade" min="0" max="120"
                                             placeholder="Ex.: 25" required>
                                         <div>Por favor, informe uma idade válida.</div>
                                     </div>
-                                    <div class="campo">
+                                    <div class="campo col-12 col-md-6">
                                         <label for="numeracao">Numeração</label>
                                         <select id="numeracao" name="numeracao" required>
                                             <option value="" selected disabled>Escolha...</option>
@@ -240,7 +240,7 @@
                                         </select>
                                         <div>Selecione uma numeração.</div>
                                     </div>
-                                    <div class="campo">
+                                    <div class="campo col-12 col-md-6">
                                         <label for="cor">Cor preferida</label>
                                         <input type="color" id="cor" name="cor" value="#ff6b35">
                                     </div>

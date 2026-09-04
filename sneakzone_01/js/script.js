@@ -1,13 +1,13 @@
-function comprar(nomeProduto, preco){
+function comprar(nomeProduto, preco) {
     console.log("Produto: ", nomeProduto);
     console.log("Preço: ", preco);
-
     alert(
-        "Você selecionou: " + nomeProduto + "Preço: R$" + preco
+        "Você selecionou: " + nomeProduto + " preço: R$ " + preco
     )
 }
 
 function cadastrar() {
+
     let nome = document.getElementById("nome").value;
     let email = document.getElementById("email").value;
     let telefone = document.getElementById("telefone").value;
@@ -16,93 +16,46 @@ function cadastrar() {
     let cor = document.getElementById("cor").value;
     let mensagem = document.getElementById("mensagem").value;
 
-
-    let estiloSelecionado = document.querySelector(
-        'input[name="estilo"]:checked'
-    );
-    
-    let estilo;
-    if (estiloSelecionado) {
-        estilo = estiloSelecionado.value;
-    } else {
-        estilo = "Não informado";
-    }
-
-
-    let tiposTenis = [];
-
-    if (document.getElementById("tenisCorrida").checked) {
-        tiposTenis.push("Corrida");
-    }
-    if (document.getElementById("tenisCasual").checked) {
-        tiposTenis.push("Casual");
-    }
-    if (document.getElementById("tenisBasquete").checked) {
-        tiposTenis.push("Basquete");
-    }
-    if (document.getElementById("tenisTrilha").checked) {
-        tiposTenis.push("Trilha");
-    }
-
+    let estilo = document.querySelector(
+        'input[name= "estilo"]:checked'
+    ).value
     let cliente = {
-        nome,
-        email,
-        telefone,
-        idade,
-        numeracao,
-        cor,
-        estilo,
-        tiposTenis,
-        mensagem
-    };
+        nome: nome,
+        email: email,
+        telefone: telefone,
+        idade: idade,
+        numeracao: numeracao,
+        cor: cor,
+        mensagem: mensagem
+    }
 
-    alert(
-        "Nome: " + nome + "\n" +
-        "E-mail: " + email + "\n" +
-        "Telefone: " + telefone + "\n" +
-        "Idade: " + idade + "\n" +
-        "Numeração: " + numeracao + "\n" +
-        "Cor: " + cor + "\n" +
-        "Estilo: " + estilo + "\n" +
-        "Interesses: " + tiposTenis.join(", ") + "\n" +
-        "Mensagem: " + mensagem
-    );
-
-    console.log(cliente);
+    console.log(nome)
 }
 
-function calcularFrete(){
+function calcularFrete() {
+    let valor = do.getElementById("valor").value;
+    let regiao = document.getElementById(regiao).value;
 
-    let valorCompra = document.getElementById("valorCompra").value;
-    let regiao = document.getElementById("regiao").value;
+    valor = parseFloat(valor);
 
-    valor = parseFloat(valorCompra);
-
-    let frete = 0;
+    let frete;
 
     if (regiao == "sudeste") {
-        frete = 19.90;
+        frete = 19, 90;
+    }
+    else if (true) {
 
     }
-
     if (regiao == "sul") {
-        frete = 24.90;
-
+        frete = 24, 90;
     }
-
     if (regiao == "nordeste") {
-        frete = 29.90;
-
+        frete = 29, 90;
     }
-
     if (valor >= 299) {
         frete = 0;
     }
 
-    document.getElementById("resultado").textContent = 
-    "Frete: R$ " + frete.toFixed(2);
-
-    console.log(valorCompra)
-    console.log(regiao)
-    console.log(frete)
+    document.getElementById("resultado").textContent =
+        "frete: R$ " + frete.toFixed(2);
 }
